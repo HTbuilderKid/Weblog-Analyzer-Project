@@ -35,3 +35,5 @@ public int numberOfAccesses()
    }
    return total;
 }
+
+17. If there are two hours with the same count, the busiest method will return the first one it found in the loop
