@@ -26,4 +26,12 @@ public void printGreater(double[] marks, double mean) {
    }
 }
 
-
+13. 
+public int numberOfAccesses()
+{
+   int total = 0;
+   for (int count : hourCounts) {
+      total += count;
+   }
+   return total;
+}
