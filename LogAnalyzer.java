@@ -47,6 +47,20 @@ public class LogAnalyzer
         }
         return quietest;
     }
+    
+    public int busiestTwoHourPeriod()
+    {
+        int busiestStart = 0;
+        int maxTotal = hourCounts[0] + hourCounts[1];
+        for (int hour = 1; hour < hourCounts.length - 1; hour++) {
+            int twoHourTotal = hourCounts[hour] + hourCounts[hour + 1];
+            if (twoHourTotal > maxTotal) {
+                maxTotal = twoHourTotal;
+                busiestStart = hour;
+            }
+        }
+        return busiestStart;
+    }
 
     /**
      * Analyze the hourly access data from the log file.
