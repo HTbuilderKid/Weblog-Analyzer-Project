@@ -24,6 +24,18 @@ public class LogAnalyzer
         // Create the reader to obtain the data.
         reader = new LogfileReader(filename);
     }
+    
+    public int busiestHour()
+    {
+        // a for loop is better here because I need the index of the busiest hour, not just the value
+        int busiest = 0;
+        for(int hour = 1; hour < hourCounts.length; hour++) {
+            if (hourCounts[hour] > hourCounts[busiest]) {
+                busiest = hour;
+            }
+        }
+        return busiest;
+    }
 
     /**
      * Analyze the hourly access data from the log file.
@@ -57,6 +69,15 @@ public class LogAnalyzer
             System.out.println(hour + ": " + hourCounts[hour]);
             hour++;
         }
+    }
+    
+    public int numberOfAccesses()
+    {
+        int total = 0;
+        for (int count : hourCounts) {
+            total += count;
+        }
+        return total;
     }
     
     /**
