@@ -10,3 +10,10 @@
 A. readings = new double[60];
 B. urls = new String[90];
 C. machines = new TicketMachine[5];
+
+7. The only String object created by the declaration is the array itself, because even though it has a range of 20, we haven't yet assigned any values to it, which should mean that they are null
+
+8. The error here is that new double(50); should be a pair of square brackets new double[50];
+
+9. I think that it will lead to an error, since we learned that arrays in java are 0 indexed. If hours equals to hourCounts.length, it will try to access an out of bounds index, which doesn't exist, so it will return an error.
+
