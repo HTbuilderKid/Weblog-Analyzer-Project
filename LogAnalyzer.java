@@ -36,6 +36,17 @@ public class LogAnalyzer
         }
         return busiest;
     }
+    
+    public int quietestHour()
+    {
+        int quietest = 0;
+        for(int hour = 1; hour < hourCounts.length; hour++) {
+            if(hourCounts[hour] < hourCounts[quietest]) {
+                quietest = hour;
+            }
+        }
+        return quietest;
+    }
 
     /**
      * Analyze the hourly access data from the log file.
