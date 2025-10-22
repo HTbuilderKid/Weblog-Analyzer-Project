@@ -17,7 +17,7 @@ C. machines = new TicketMachine[5];
 
 9. I think that it will lead to an error, since we learned that arrays in java are 0 indexed. If hours equals to hourCounts.length, it will try to access an out of bounds index, which doesn't exist, so it will return an error.
 
-10.
+11.
 public void printGreater(double[] marks, double mean) {
    for (int index = 0; index < marks.length; index++) {
      if (marks[index] > mean) {
@@ -25,3 +25,5 @@ public void printGreater(double[] marks, double mean) {
      }
    }
 }
+
+
